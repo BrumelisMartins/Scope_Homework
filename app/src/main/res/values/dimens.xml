@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="icon_width">25dp</dimen>
+    <dimen name="icon_height">40dp</dimen>
+</resources>
