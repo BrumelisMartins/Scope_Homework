@@ -23,6 +23,7 @@ When clicking on a marker a route is planned from the MapBox directions API, and
 ![third_view](https://user-images.githubusercontent.com/45454489/151355268-9cc66cfb-bd2d-4b40-8ab8-6878bdba5838.jpg)
 
 ![multiple_markers](https://user-images.githubusercontent.com/45454489/151355266-beb764cf-51fa-4198-bbea-d86eb4623e27.jpg)
+
 ![multiple_markers_route](https://user-images.githubusercontent.com/45454489/151355273-83eb68db-5f00-4d2c-ac7d-e393d63694ad.jpg)
 
 # Possible Improvements:
