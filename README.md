@@ -18,6 +18,8 @@ When the location is found the map animates/zooms so the user can see all the ma
 
 ![second_view](https://user-images.githubusercontent.com/45454489/151355269-1a7938fb-1265-4fc1-bfef-1e0ec439687c.jpg)
 
+When clicking on a marker a route is planned from the MapBox directions API, and visualised on the screen. When a valid route is found the map animates/zooms so the whole route is visible. In case of multiple markers, when clicking on a second one, the previous rout disappears and the new one shows up.
+
 ![third_view](https://user-images.githubusercontent.com/45454489/151355268-9cc66cfb-bd2d-4b40-8ab8-6878bdba5838.jpg)
 
 ![multiple_markers](https://user-images.githubusercontent.com/45454489/151355266-beb764cf-51fa-4198-bbea-d86eb4623e27.jpg)
