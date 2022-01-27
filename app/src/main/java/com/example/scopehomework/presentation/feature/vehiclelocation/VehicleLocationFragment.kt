@@ -43,8 +43,11 @@ import com.mapbox.mapboxsdk.maps.Style
 import com.mapbox.mapboxsdk.style.layers.LineLayer
 import com.mapbox.mapboxsdk.style.layers.Property
 import com.mapbox.mapboxsdk.style.layers.PropertyFactory.*
+import kotlin.time.Duration.Companion.seconds
+import kotlin.time.ExperimentalTime
 
 
+@ExperimentalTime
 @AndroidEntryPoint
 class VehicleLocationFragment : Fragment() {
 
@@ -61,7 +64,6 @@ class VehicleLocationFragment : Fragment() {
         if (!isGranted(AppPermission.ACCESS_FINE_LOCATION)) {
             requestPermission(AppPermission.ACCESS_FINE_LOCATION)
         }
-        (activity as AppCompatActivity).requestAllPermissions(AppPermission.ACCESS_FINE_LOCATION)
 
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_vehicle_location, container, false)
@@ -77,10 +79,10 @@ class VehicleLocationFragment : Fragment() {
 
     private fun getUserList() {
         lifecycleScope.launch {
-            viewModel.getVehicleLocation(args.user.userid!!)
+            viewModel.getVehicleLocation(args.user.userid!!, 60.seconds)
                 .collect {
                     when (it) {
-                        is State.DataState -> setUserDataAndLocation(it.data.data)
+                        is State.DataState -> setUserDataAndLocation(it.data)
                         is State.ErrorState -> {
                             context?.let { context ->
                                 showErrorDialog(context)
@@ -114,7 +116,7 @@ class VehicleLocationFragment : Fragment() {
     private fun showCantShowRouteDialog() {
         Toast.makeText(
             context,
-            "Sorry, no route available",
+            getString(R.string.no_route_available),
             Toast.LENGTH_SHORT
         ).show()
     }

@@ -2,6 +2,22 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
 
+<!--    User list design-->
     <dimen name="icon_width">25dp</dimen>
     <dimen name="icon_height">40dp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="title_padding">15dp</dimen>
+    <dimen name="list_start_margin">30dp</dimen>
+    <dimen name="user_icon_image_size">80dp</dimen>
+    <dimen name="user_list_top_bottom_margin">15dp</dimen>
+    <dimen name="user_icon_stroke_size">3dp</dimen>
+    <dimen name="list_content_margin">15dp</dimen>
+    <dimen name="line_height">2dp</dimen>
+    <dimen name="info_button_size">24dp</dimen>
+<!--    Map fragment design-->
+    <dimen name="text_size_small">16sp</dimen>
+    <dimen name="vehicle_info_side_margin">10dp</dimen>
+    <dimen name="vehicle_info_top_margin">5dp</dimen>
+    <dimen name="color_height">30dp</dimen>
+    <dimen name="vehicle_info_icon_height">40dp</dimen>
 </resources>

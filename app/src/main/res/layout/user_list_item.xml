@@ -8,24 +8,24 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/user_image"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
+                android:layout_width="@dimen/user_icon_image_size"
+                android:layout_height="@dimen/user_icon_image_size"
+                android:layout_marginStart="@dimen/list_start_margin"
+                android:layout_marginTop="@dimen/user_list_top_bottom_margin"
+                android:layout_marginBottom="@dimen/user_list_top_bottom_margin"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/circleImageView"
                 app:strokeColor="@color/orange"
-                app:strokeWidth="3dp"
-                android:padding="3dp">
+                app:strokeWidth="@dimen/user_icon_stroke_size"
+                android:padding="@dimen/user_icon_stroke_size">
             </com.google.android.material.imageview.ShapeableImageView>
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="@dimen/list_content_margin"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@id/surname"
                 app:layout_constraintStart_toEndOf="@id/user_image"
@@ -37,7 +37,7 @@
                 android:id="@+id/surname"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="@dimen/list_content_margin"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/user_image"
@@ -46,8 +46,8 @@
 
             <View
                 android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginTop="@dimen/list_content_margin"
                 app:layout_constraintTop_toBottomOf="@id/surname"
                 app:layout_constraintStart_toStartOf="@id/surname"
                 app:layout_constraintEnd_toEndOf="@id/info_button"
@@ -57,10 +57,10 @@
 
             <ImageView
                 android:id="@+id/info_button"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
+                android:layout_width="@dimen/info_button_size"
+                android:layout_height="@dimen/info_button_size"
+                android:layout_marginStart="@dimen/list_content_margin"
+                android:layout_marginEnd="@dimen/list_content_margin"
                 android:src="@drawable/ic_info"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

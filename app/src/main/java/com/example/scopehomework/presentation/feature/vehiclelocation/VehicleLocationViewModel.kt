@@ -3,6 +3,7 @@ package com.example.scopehomework.presentation.feature.vehiclelocation
 import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.location.LocationManager
+import android.util.Log
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.ViewModel
@@ -18,13 +19,14 @@ import com.mapbox.geojson.Point
 import com.mapbox.mapboxsdk.annotations.Icon
 import com.mapbox.mapboxsdk.annotations.IconFactory
 import com.mapbox.mapboxsdk.geometry.LatLng
-import com.mapbox.mapboxsdk.geometry.LatLngBounds
 
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
+import kotlin.time.Duration
+import kotlin.time.ExperimentalTime
 
 
 @HiltViewModel
@@ -43,9 +45,14 @@ class VehicleLocationViewModel @Inject constructor(
     val layerBelowID = "road-label-small"
     val padding = 200
 
-    fun getVehicleLocation(userId: Int) = flow {
-        emit(State.LoadingState)
-        emit(State.DataState(locationUseCase.execute(userId)))
+
+    @ExperimentalTime
+    fun getVehicleLocation(userId: Int, period: Duration) = flow {
+        while (true){
+            emit(State.LoadingState)
+            emit(State.DataState(locationUseCase.execute(userId)))
+            delay(period)
+        }
     }.catch { e ->
         e.printStackTrace()
         emit(Utils.resolveError(e))

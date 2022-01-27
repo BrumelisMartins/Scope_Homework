@@ -7,9 +7,9 @@
     <ImageView
         android:id="@+id/car_image"
         android:layout_width="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/vehicle_info_top_margin"
+        android:layout_marginStart="@dimen/vehicle_info_side_margin"
+        android:layout_height="@dimen/vehicle_info_icon_height"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
     </ImageView>
@@ -18,11 +18,8 @@
         android:id="@+id/vehicle_title_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:text="Model name:"
+        style="@style/list_text_bold"
+        android:text="@string/model_name"
         app:layout_constraintTop_toBottomOf="@+id/car_image"
         app:layout_constraintStart_toStartOf="parent">
     </TextView>
@@ -31,12 +28,8 @@
         android:id="@+id/vehicle_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:textSize="16sp"
-        android:textColor="@color/black"
+        style="@style/list_text_regular"
         app:layout_constraintTop_toBottomOf="@id/vehicle_title_description"
-        android:text="saab"
         app:layout_constraintStart_toStartOf="parent">
     </TextView>
 
@@ -44,11 +37,8 @@
         android:id="@+id/current_address_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Curerent location:"
+        style="@style/list_text_bold"
+        android:text="@string/curerent_location"
         app:layout_constraintTop_toBottomOf="@id/vehicle_title"
         app:layout_constraintStart_toStartOf="parent">
     </TextView>
@@ -57,12 +47,8 @@
         android:id="@+id/current_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:text="LOCATION"
+        style="@style/list_text_regular"
+        android:text="@string/location"
         app:layout_constraintTop_toBottomOf="@id/current_address_description"
         app:layout_constraintStart_toStartOf="parent">
     </TextView>
@@ -71,21 +57,18 @@
         android:id="@+id/color_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="Color:"
+        style="@style/list_text_bold"
+        android:text="@string/color"
         app:layout_constraintTop_toBottomOf="@id/current_address"
         app:layout_constraintStart_toStartOf="parent">
     </TextView>
     <ImageView
         android:id="@+id/color_image"
         android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_height="@dimen/color_height"
+        android:layout_marginTop="@dimen/vehicle_info_top_margin"
+        android:layout_marginStart="@dimen/vehicle_info_side_margin"
+        android:layout_marginEnd="@dimen/vehicle_info_side_margin"
         app:layout_constraintTop_toBottomOf="@id/color_description"
         app:layout_constraintStart_toStartOf="@id/color_description"
         android:src="@color/black"

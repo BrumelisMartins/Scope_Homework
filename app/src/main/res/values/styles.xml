@@ -4,4 +4,19 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="list_text_bold" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_marginTop">@dimen/vehicle_info_top_margin</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="list_text_regular" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:layout_marginTop">@dimen/vehicle_info_top_margin</item>
+        <item name="android:layout_marginStart">@dimen/vehicle_info_side_margin</item>
+        <item name="android:layout_marginEnd">@dimen/vehicle_info_side_margin</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

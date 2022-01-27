@@ -8,14 +8,14 @@
 
     <TextView
         app:layout_constraintTop_toTopOf="parent"
-        android:padding="15dp"
-        android:textSize="24sp"
+        android:padding="@dimen/title_padding"
+        android:textSize="@dimen/text_size_large"
         android:id="@+id/fragment_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:background="@color/orange"
-        android:text="Our Drivers">
+        android:text="@string/our_drivers">
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView

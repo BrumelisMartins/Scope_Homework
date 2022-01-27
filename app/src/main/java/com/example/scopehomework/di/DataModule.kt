@@ -3,6 +3,9 @@ package com.example.scopehomework.di
 import android.content.Context
 import android.content.res.Resources
 import android.location.LocationManager
+import androidx.room.Room
+import com.example.scopehomework.data.db.UserDao
+import com.example.scopehomework.data.db.UserDatabase
 import com.example.scopehomework.data.mappers.VehicleEntityMapper
 import com.example.scopehomework.data.repository.MapRepositoryImpl
 import com.example.scopehomework.data.repository.VehicleRepositoryImpl
@@ -95,18 +98,6 @@ class NetworkModule {
         return Cache(httpCacheDirectory, CACHE_SIZE_BYTES)
     }
 
-    @Provides
-    @Singleton
-    fun provideContext(application: App): Context {
-        return application.applicationContext
-    }
-
-    @Provides
-    @Singleton
-    fun provideResources(context: Context): Resources {
-        return context.resources
-    }
-
     @Singleton
     @Provides
     fun provideApiService(retrofit: Retrofit): VehicleApiService =
@@ -126,14 +117,12 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesIconFactory(context: Context): IconFactory {
-        return IconFactory.getInstance(context)
-    }
-
-    @Provides
-    @Singleton
-    fun providesLocationManager(context: Context): LocationManager {
-        return context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+    fun providesUserDatabase(@ApplicationContext appContext: Context): UserDatabase {
+        return Room.databaseBuilder(
+            appContext,
+            UserDatabase::class.java,
+            "RssReader"
+        ).build()
     }
 
     @ExperimentalCoroutinesApi
