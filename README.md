@@ -31,6 +31,7 @@ When multiple markers are visible, the map zooms in so both markers are visible 
 ![multiple_markers_route](https://user-images.githubusercontent.com/45454489/151355273-83eb68db-5f00-4d2c-ac7d-e393d63694ad.jpg)
 
 In case if an API call error occurs a popup is shown, and the user can retry the API call.
+In the case when a route cannot be found a message is shouwn that we could not find a route.
 
 ![error_view](https://user-images.githubusercontent.com/45454489/151358320-06bc3bef-e1ed-496c-9177-92445f376e97.jpg)
 
