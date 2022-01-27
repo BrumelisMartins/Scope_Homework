@@ -7,7 +7,7 @@ Code is split into Data -> Domain -> Presentation layers. Layers are connected w
 For API calls application uses Retrofit 2, and RoomDB to store the data.
 
 On the first screen you can see a user list, with their images and data. Colors and designs are used from Material Design.
-Images are loaded with kt:coil library, it uses an internal caching mechanism, so the .jpg are stored locally for reuse.
+Images are loaded with kt:coil library, it uses an internal caching mechanism, so the .jpg are stored locally for reuse. Database data is used as the single source of truth, a new list is fetched from the API only when the data is outdated, or it is empty.
 
 ![first_view](https://user-images.githubusercontent.com/45454489/151355214-b3f87734-70ab-407a-8976-572701923161.jpg)
 
@@ -27,6 +27,10 @@ When multiple markers are visible, the map zooms in so both markers are visible 
 ![multiple_markers](https://user-images.githubusercontent.com/45454489/151355266-beb764cf-51fa-4198-bbea-d86eb4623e27.jpg)
 
 ![multiple_markers_route](https://user-images.githubusercontent.com/45454489/151355273-83eb68db-5f00-4d2c-ac7d-e393d63694ad.jpg)
+
+In case if an API call error occurs a popup is shown, and the user can retry the API call.
+
+![error_view](https://user-images.githubusercontent.com/45454489/151358320-06bc3bef-e1ed-496c-9177-92445f376e97.jpg)
 
 # Possible Improvements:
 
