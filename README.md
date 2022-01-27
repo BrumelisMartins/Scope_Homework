@@ -15,9 +15,8 @@ When clicking on a user you are redirected to a screen that contains a map, and 
 The map library used - MapBox. I did not use gms, as I had issues with my account billing for address Geocoding and Directions API'S
 
 When the location is found the map animates/zooms so the user can see all the markers. Vehicle markers match the information on the overlay, so in case of multiple markers, you can diferentiate betweeen them.
-![second_view](https://user-images.githubusercontent.com/45454489/151355269-1a7938fb-1265-4fc1-bfef-1e0ec439687c.jpg)
 
-![permissions_view](https://user-images.githubusercontent.com/45454489/151355272-7e47b763-aa61-4ca8-a447-60555ee8ac64.jpg)
+![second_view](https://user-images.githubusercontent.com/45454489/151355269-1a7938fb-1265-4fc1-bfef-1e0ec439687c.jpg)
 
 ![third_view](https://user-images.githubusercontent.com/45454489/151355268-9cc66cfb-bd2d-4b40-8ab8-6878bdba5838.jpg)
 
