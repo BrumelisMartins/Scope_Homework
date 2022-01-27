@@ -16,7 +16,7 @@ Images are loaded with kt:coil library, it uses an internal caching mechanism, s
 When clicking on a user you are redirected to a screen that contains a map, and the overlay that contains the vehicle information.
 The map library used - MapBox. I did not use gms, as I had issues with my account billing for address Geocoding and Directions API'S
 
-When the location is found the map animates/zooms so the user can see all the markers. Vehicle markers match the information on the overlay, so in case of multiple markers, you can diferentiate betweeen them. User address is found from the MapBox geocoding API.
+When the location is found the map animates/zooms so the user can see all the markers. Vehicle markers match the color on the overlay, so in case of multiple markers, you can diferentiate betweeen them. User address is found from the MapBox geocoding API.
 
 ![second_view](https://user-images.githubusercontent.com/45454489/151355269-1a7938fb-1265-4fc1-bfef-1e0ec439687c.jpg)
 
