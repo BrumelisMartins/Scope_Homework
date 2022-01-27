@@ -2,6 +2,8 @@
 
 The application is constructed using Clean architecture + MVVM, which is the current Googles recomendation on how to structure applications.
 Code is split into Data -> Domain -> Presentation layers. Layers are connected with dependency injection, library used: HILT.
+The Data stream between layers is connected with suspend functions and Flows.
+
 ![image](https://user-images.githubusercontent.com/45454489/151356087-8ad29988-b4c7-40ef-8013-8aaf252b8067.png)
 
 For API calls application uses Retrofit 2, and RoomDB to store the data.
